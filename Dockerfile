@@ -18,11 +18,7 @@ RUN tar xf /tmp/tomcat.tar.gz -C /opt
 RUN ln -s /opt/apache-tomcat-8.5.69 /opt/tomcat
 RUN rm /tmp/tomcat.tar.gz
 
-# Set environment variables for Tomcat
-#ENV CATALINA_HOME /opt/tomcat
-#ENV PATH $CATALINA_HOME/bin:$PATH
-
-# Copy the sample application (replace 'sample.war' with your application's war file)
+# Copy the application's war file
 COPY FlyAway*.war /opt/tomcat/webapps/FlyAway.war
 
 # Expose the default Tomcat port
